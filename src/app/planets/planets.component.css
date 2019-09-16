@@ -1,0 +1,7 @@
+.bg {
+  background-image: url('../planets/images/planets.jpg');
+  opacity: 0.7;
+  background-size: cover;
+  height: 100%;
+  color: white;
+}

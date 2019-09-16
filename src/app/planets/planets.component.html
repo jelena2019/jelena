@@ -1,0 +1,17 @@
+<div class="container">
+  <h3 class="text-center">* PLANETS *</h3>
+  <table class="table table-hover">
+    <thead>
+      <th>#</th>
+      <th>Planet name</th>
+      <th>Planet diameter</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let planet of planets">
+        <td>{{ planet.id }}</td>
+        <td>{{ planet.name }}</td>
+        <td>{{ planet.diameter }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

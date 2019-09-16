@@ -1,0 +1,30 @@
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <th>#</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>E-mail</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees" class="bg-info">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <div class="col text-center">
+      <div *ngIf="protected" class="bg-red">Document protected</div>
+      <div *ngIf="!protected || protected === 'undefined'" class="bg-green">Document not protected</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-warning" (click)="changeState()">click me</button>
+    </div>
+  </div>
+</div>

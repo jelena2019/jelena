@@ -1,0 +1,18 @@
+<div class="container">
+  <div *ngFor="let product of products">
+    <div>
+      Id: {{ product.id }}
+      <!-- {{typeOf(product.id)}} -->
+      Name: {{ product.name }} Price: {{ product.price }}
+      <button (mouseup)="getProductByProductId(product.id)" class="btn btn-primary">Select</button>
+    </div>
+  </div>
+
+  <input type="text" [(ngModel)]="serverVariable" />
+  {{ serverVariable }}
+
+  <h5>Selected product:</h5>
+  <p>{{ selectedProduct.id }}</p>
+  <p>{{ selectedProduct.name }}</p>
+  <p>{{ selectedProduct.price }}</p>
+</div>

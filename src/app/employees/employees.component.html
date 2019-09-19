@@ -5,13 +5,19 @@
       <th>First name</th>
       <th>Last name</th>
       <th>E-mail</th>
+      <th>More</th>
     </thead>
     <tbody>
-      <tr *ngFor="let employee of employees" class="bg-info">
+      <tr *ngFor="let employee of employees; index as id" class="bg-info">
         <td>{{ employee.id }}</td>
         <td>{{ employee.firstName }}</td>
         <td>{{ employee.lastName }}</td>
         <td>{{ employee.email }}</td>
+        <td>
+          <a [title]="employee.id + 'details'" [routerLink]="['/employee-details', employee.id]">
+            Details
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>

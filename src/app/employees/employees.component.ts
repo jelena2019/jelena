@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmployeesService } from './employees.service';
 import { Employee } from '../core/models/employee.model';
 
@@ -12,7 +13,7 @@ export class EmployeesComponent implements OnInit {
   employees: Employee[] = [];
   protected: boolean;
 
-  constructor(private employeesService: EmployeesService) {}
+  constructor(private employeesService: EmployeesService, private router: Router) {}
 
   ngOnInit() {
     this.isLoading = true;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from './products.service';
 import { Product } from '../core/models/product.model';
 
@@ -10,7 +11,7 @@ import { Product } from '../core/models/product.model';
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
   serverVariable = 'pera';
-  selectedProduct: Product;
+  selectedProduct: Product = new Product(null, null, null);
 
   constructor(private productsService: ProductsService) {}
 

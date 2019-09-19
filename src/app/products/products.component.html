@@ -1,10 +1,9 @@
 <div class="container">
   <div *ngFor="let product of products">
     <div>
-      Id: {{ product.id }}
-      <!-- {{typeOf(product.id)}} -->
-      Name: {{ product.name }} Price: {{ product.price }}
+      Id: {{ product.id }} Name: {{ product.name }} Price: {{ product.price }}
       <button (mouseup)="getProductByProductId(product.id)" class="btn btn-primary">Select</button>
+      <a [title]="product.id + 'details'" [routerLink]="['/product-details', product.id]"> Details </a>
     </div>
   </div>
 

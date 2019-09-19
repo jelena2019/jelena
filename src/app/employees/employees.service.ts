@@ -21,4 +21,14 @@ export class EmployeesService {
       // catchError(console.log())
     );
   }
+
+  getEmployeeById(id: any): Observable<Employee> {
+    console.log(this.apiUrl);
+    return this.http.get(this.apiUrl + '/' + id).pipe(
+      map((res: any) => {
+        return res as Employee;
+      })
+      // catchError(console.log())
+    );
+  }
 }

@@ -26,7 +26,6 @@ export class EmployeeDetailsComponent implements OnInit {
     this.employeesService.getEmployeeById(id).subscribe((x: Employee) => {
       this.employee = x;
       console.log(this.employee);
-      // this.isLoading = false;
     });
   }
 }

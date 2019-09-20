@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { Shell } from '@app/shell/shell.service';
+import { ShellService } from '@app/shell/shell.service';
 
 const routes: Routes = [
-  Shell.childRoutes([
+  ShellService.childRoutes([
     { path: 'about', loadChildren: './about/about.module#AboutModule' },
     { path: 'employees', loadChildren: './employees/employees.module#EmployeesModule' },
     { path: 'products', loadChildren: './products/products.module#ProductsModule' },

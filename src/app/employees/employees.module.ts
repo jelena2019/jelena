@@ -8,6 +8,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 
 @NgModule({
   declarations: [EmployeesComponent, EmployeeDetailsComponent],
+  exports: [],
   imports: [CommonModule, EmployeesRoutingModule],
   providers: [EmployeesService]
 })

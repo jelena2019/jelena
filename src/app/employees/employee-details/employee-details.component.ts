@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from '@app/core/models/employee.model';
 import { EmployeesService } from '../employees.service';
 
@@ -12,7 +12,7 @@ export class EmployeeDetailsComponent implements OnInit {
   employee: Employee = new Employee(null, null, null, null);
   id: any;
 
-  constructor(private employeesService: EmployeesService, private route: ActivatedRoute) {}
+  constructor(private employeesService: EmployeesService, private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {

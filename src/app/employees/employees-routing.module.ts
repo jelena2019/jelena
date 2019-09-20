@@ -8,7 +8,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 const routes: Routes = [
   // Module is lazy loaded, see app-routing.module.ts
 
-  { path: 'employees', component: EmployeesComponent, data: { title: extract('Employees') } },
+  { path: '', component: EmployeesComponent, data: { title: extract('Employees') } },
   { path: 'employee-details/:id', component: EmployeeDetailsComponent, data: { title: extract('Employee Details') } }
 ];
 

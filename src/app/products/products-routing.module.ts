@@ -7,7 +7,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 
 const routes: Routes = [
   // Module is lazy loaded, see app-routing.module.ts
-  { path: 'products', component: ProductsComponent, data: { title: extract('Products') } },
+  { path: '', component: ProductsComponent, data: { title: extract('Products') } },
   { path: 'product-details/:id', component: ProductDetailsComponent, data: { title: extract('Product Details') } }
 ];
 

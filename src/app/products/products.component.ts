@@ -10,7 +10,7 @@ import { Product } from '../core/models/product.model';
 })
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
-  serverVariable = 'pera';
+  serverVariable = 'Select product';
   selectedProduct: Product = new Product(null, null, null);
 
   constructor(private productsService: ProductsService) {}

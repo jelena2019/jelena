@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, Inject, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { EmployeesService } from './employees.service';
 import { Employee } from '../core/models/employee.model';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-employees',
@@ -12,6 +14,7 @@ export class EmployeesComponent implements OnInit {
   isLoading: boolean;
   employees: Employee[] = [];
   protected: boolean;
+  name: string;
 
   constructor(private employeesService: EmployeesService, private router: Router) {}
 

@@ -8,6 +8,7 @@ const routes: Routes = [
     { path: 'employees', loadChildren: './employees/employees.module#EmployeesModule' },
     { path: 'products', loadChildren: './products/products.module#ProductsModule' },
     { path: 'planets', loadChildren: './planets/planets.module#PlanetsModule' }
+    // { path: 'projects', loadChildren: './projects/projects.module#ProjectsModule' }
   ]),
   // Fallback when no prior route is matched
   { path: '**', redirectTo: '', pathMatch: 'full' }

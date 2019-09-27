@@ -54,5 +54,14 @@
       "name": "Earth",
       "diameter": 12756
     }
+  ],
+
+  "projects": [
+    {
+      "id": 1,
+      "name": "IOP Hub",
+      "membersCount": 5,
+      "members": []
+    }
   ]
 }

@@ -11,7 +11,8 @@ export class ProjectsService {
   apiUrl = 'projects';
 
   constructor(private http: HttpClient) {}
-  getProjects(): Observable<Project[]> {
+
+  getAllProjects(): Observable<Project[]> {
     console.log(this.apiUrl);
     return this.http.get(this.apiUrl).pipe(
       map((res: any) => {
@@ -24,6 +25,35 @@ export class ProjectsService {
   getProjectById(id: any): Observable<Project> {
     console.log(this.apiUrl);
     return this.http.get(this.apiUrl + '/' + id).pipe(
+      map((res: any) => {
+        return res as Project;
+      })
+      // catchError(console.log())
+    );
+  }
+
+  createProject(project: Project): Observable<Project> {
+    return this.http.post(this.apiUrl, project).pipe(
+      map((res: any) => {
+        return res as Project;
+      })
+      // catchError(console.log())
+    );
+  }
+
+  updateProject(project: Project): Observable<Project> {
+    console.log(this.apiUrl + '/' + project.id);
+    return this.http.put(this.apiUrl, project).pipe(
+      map((res: any) => {
+        return res as Project;
+      })
+      // catchError(console.log())
+    );
+  }
+
+  deleteProject(project: Project): Observable<Project> {
+    console.log('delete: ', this.apiUrl + '/' + project.id);
+    return this.http.delete(this.apiUrl + '/' + project.id).pipe(
       map((res: any) => {
         return res as Project;
       })

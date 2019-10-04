@@ -11,7 +11,10 @@ const routes: Routes = [
   //   { path: '', component: ProjectsComponent, data: { title: extract('Projects') } }
   // ])
 
-  ShellService.childRoutes([{ path: 'projects', component: ProjectsComponent, data: { title: extract('Projects') } }])
+  ShellService.childRoutes([
+    { path: 'projects', component: ProjectsComponent, data: { title: extract('Projects') } }
+    // { path: 'project-details/:id', component: ProjectDetailsComponent, data: { title: extract('Project Details') }
+  ])
 ];
 
 @NgModule({

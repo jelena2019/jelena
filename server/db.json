@@ -19,7 +19,6 @@
       "email": "ann@codingthesmartway.com"
     }
   ],
-
   "products": [
     {
       "id": 1,
@@ -37,7 +36,6 @@
       "price": 30
     }
   ],
-
   "planets": [
     {
       "id": 1,
@@ -55,13 +53,30 @@
       "diameter": 12756
     }
   ],
-
   "projects": [
     {
       "id": 1,
       "name": "IOP Hub",
       "membersCount": 5,
       "members": []
+    },
+    {
+      "id": 2,
+      "name": "XYZ",
+      "membersCount": 10,
+      "members": []
+    },
+    {
+      "id": 5,
+      "name": "dsgfdag",
+      "membersCount": "4",
+      "members": "yyyyyy"
+    },
+    {
+      "id": 6,
+      "name": "yjykjyuj",
+      "membersCount": "5",
+      "members": "5"
     }
   ]
 }

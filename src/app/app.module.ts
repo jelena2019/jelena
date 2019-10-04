@@ -16,8 +16,6 @@ import { EmployeesModule } from './employees/employees.module';
 import { ProductsModule } from './products/products.module';
 import { PlanetsModule } from './planets/planets.module';
 import { ProjectsModule } from './projects/projects.module';
-import { EmployeeDetailsComponent } from './employees/employee-details/employee-details.component';
-import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 @NgModule({
   imports: [

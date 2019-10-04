@@ -1,10 +1,70 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-sm">
-      One of two columns
+      <h1>All projects</h1>
+      <table class="table table-bordered">
+        <thead>
+          <th>#</th>
+          <th>Name</th>
+          <th>Members Count</th>
+          <th>Members</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let project of projects" class="bg-info">
+            <td>{{ project.id }}</td>
+            <td>{{ project.name }}</td>
+            <td>{{ project.membersCount }}</td>
+            <td>{{ project.members }}</td>
+            <td>
+              <i class="far fa-edit" (click)="setSelectedProject(project)"></i>
+              <i class="fas fa-times" (click)="delete(project)"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="col-sm">
-      One of two columns
+      <div class="col-sm">
+        <h1 *ngIf="mode === 'update'">Update project</h1>
+        <h1 *ngIf="mode === 'new'">Create project</h1>
+
+        <form>
+          <!-- <div class="form-group">
+            <label>Project ID:</label>
+            <input type="text" [(ngModel)]="selectedProject.id" name="id">
+          </div> -->
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Project Name:</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="selectedProject.name" name="name" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Members Count:</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="selectedProject.membersCount" name="membersCount" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Members:</label>
+            <div class="col-sm-6">
+              <input type="text" [(ngModel)]="selectedProject.members" name="members" class="form-control" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-6 offset-sm-2">
+              <button type="submit" (click)="save(selectedProject)" *ngIf="mode === 'new'" class="btn btn-primary">
+                Save
+              </button>
+              <button type="submit" (click)="update(selectedProject)" *ngIf="mode === 'update'" class="btn btn-primary">
+                Update
+              </button>
+              <button type="button" (click)="cancel()" class="btn btn-danger">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
